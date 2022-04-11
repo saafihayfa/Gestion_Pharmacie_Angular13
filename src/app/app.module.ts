@@ -7,7 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { MedicamentsComponent } from './medicaments/medicaments.component';
 import { FormsModule } from '@angular/forms';
-import { Navbar1Component } from './navbar1/navbar1.component';
+import { RegisterComponent } from './register/register.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { Navbar1Component } from './navbar1/navbar1.component';
     NavbarComponent,
     LoginComponent,
     MedicamentsComponent,
-    Navbar1Component
+    RegisterComponent,
+    AddMedicamentComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

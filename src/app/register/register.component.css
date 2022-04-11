@@ -265,6 +265,7 @@ input[type="email"]:focus {
   background-color: #15360e;
   box-shadow: 0 0 0 1px #2a551e inset, 0 5px 10px rgba(0, 0, 0, 0.75);
 }
+
 input::placeholder {
   color: #ffffff;
   opacity: 1;
@@ -272,5 +273,3 @@ input::placeholder {
 input:placeholder-shown {
   border: 1px solid #ffffff;
 }
-
-

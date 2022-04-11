@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Navbar1Component } from './navbar1.component';
+import { RegisterComponent } from './register.component';
 
-describe('Navbar1Component', () => {
-  let component: Navbar1Component;
-  let fixture: ComponentFixture<Navbar1Component>;
+describe('RegisterComponent', () => {
+  let component: RegisterComponent;
+  let fixture: ComponentFixture<RegisterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Navbar1Component ]
+      declarations: [ RegisterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Navbar1Component);
+    fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,4 +22,6 @@ describe('Navbar1Component', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
+
