@@ -1,1 +1,28 @@
-<p>add-medicament works!</p>
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+
+     <h4><font color="blue" > Nouveau Médicament </font> </h4>
+     <form>
+  <table class="table table-striped" >
+   <tr>
+    <th>Nom </th>
+     <td><input type="text"[(ngModel)]= "NewMedicament.nom" name="nom" class="form-control"> </td>
+  </tr>
+   <tr>
+   <th> Prix</th>
+    <td><input type="number" [(ngModel)]= "NewMedicament.prix" name="prix" class="form-control"> </td>
+  </tr>
+    <tr>
+     <th> Libellé </th>
+      <td><input type="text" [(ngModel)]= "NewMedicament.libelle" name="libelle" class="form-control"> </td>
+    </tr>
+    </table>
+
+    <button type="submit" (click)="addProduit()" class="btn btnsuccess" > Ajouter</button>
+      </form>
+  </div>
+  </div>
+</div>

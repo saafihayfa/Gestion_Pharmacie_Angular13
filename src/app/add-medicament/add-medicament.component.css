@@ -1,0 +1,24 @@
+
+
+div[container]{
+
+  width: 10;
+  height: 20;
+}
+
+
+button[type=submit]
+{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    color:  rgb(90, 138, 201);
+}
+
+button {
+  background-color: white;
+  color: black;
+  border: 2px solid #81a2c2;
+}
+

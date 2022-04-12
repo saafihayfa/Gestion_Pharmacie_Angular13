@@ -10,11 +10,11 @@ import { Router } from '@angular/router';
   templateUrl: './medicaments.component.html',
   styleUrls: ['./medicaments.component.css']
 })
-export class MedicamentsComponent implements OnInit {
+export class MedicamentsComponent {
 
- medicaments ! : medicament[] ;
+ medicam !:medicament[]  ;
 
-  constructor(private MedicamentService: MedicamentsService, private router : Router) {
+  constructor(private MedicamentsService: MedicamentsService, private router : Router) {
 
    //this.medicaments= MedicamentService.listeMedicaments();
 
@@ -22,18 +22,18 @@ export class MedicamentsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.MedicamentService.listeMedicament().subscribe( med => {
-      console.log(med);
-      this.medicaments = med;
+    this.MedicamentsService.listeMedicament().subscribe( data => {
+      this.medicam=data
+      console.log(data);
       });
 
   }
 
   supprimerMedicament(med: medicament)
   {
-      let conf = confirm("Etes-vous sûr ?");
+      let conf = confirm("Etes-vous sûr de supprimer ce médicament?");
        if (conf)
-           this.MedicamentService.supprimerMedicament(med.id).subscribe(() => {
+           this.MedicamentsService.supprimerMedicament(med.id).subscribe(() => {
                console.log("médicament supprimé");
   });
 

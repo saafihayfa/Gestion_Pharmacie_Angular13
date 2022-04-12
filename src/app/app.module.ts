@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
+import { UpdatemedicamentComponent } from './updatemedicament/updatemedicament.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AddMedicamentComponent } from './add-medicament/add-medicament.componen
     MedicamentsComponent,
     RegisterComponent,
     AddMedicamentComponent,
+    UpdatemedicamentComponent,
   ],
 
   imports: [
