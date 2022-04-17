@@ -22,14 +22,14 @@ export class MedicamentsComponent {
 
   ngOnInit(): void {
 
-    this.MedicamentsService.listeMedicament().subscribe( data => {
+    this.MedicamentsService.listerMedicament().subscribe( data => {
       this.medicam=data
       console.log(data);
-      });
+      } );
 
   }
 
-  supprimerMedicament(med: medicament)
+  supprimMedicament(med: medicament)
   {
       let conf = confirm("Etes-vous sûr de supprimer ce médicament?");
        if (conf)
@@ -37,11 +37,9 @@ export class MedicamentsComponent {
                console.log("médicament supprimé");
   });
 
-
-
-this.router.navigate(['medicaments']).then(() => {
-window.location.reload();
-});
+    this.router.navigate(['medicaments']).then(() => {
+     window.location.reload();
+    });
 }
 
 }

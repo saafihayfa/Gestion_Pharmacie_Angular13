@@ -18,13 +18,12 @@ export class MedicamentsService {
 
   apiURL: string = 'http://127.0.0.1:8000/api/medicaments.json' ;
 
-
   constructor(private http : HttpClient) {
 
   }
 
 
-  listeMedicament(): Observable<medicament[]>{
+  listerMedicament(): Observable<medicament[]>{
     return this.http.get<medicament[]>(this.apiURL);
     }
 
@@ -32,9 +31,10 @@ export class MedicamentsService {
       return this.http.post<medicament>(this.apiURL, m, httpOptions);
       }
 
-  supprimerMedicament(id : number) {
-      const url = `${this.apiURL}/${id}`;
-      return this.http.delete(url, httpOptions);
-  }
+  supprimerMedicament(id : number){
+        const url =  `${this.apiURL}/${id}`;
+        return this.http.delete<medicament>( url, httpOptions);
+        }
+
 
 }

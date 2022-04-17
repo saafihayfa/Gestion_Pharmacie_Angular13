@@ -6,6 +6,7 @@ import { MedicamentsComponent } from './medicaments/medicaments.component';
 import { RegisterComponent } from './register/register.component';
 import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
 import { UpdatemedicamentComponent } from './updatemedicament/updatemedicament.component';
+import { AccueilComponent } from './accueil/accueil.component';
 
 
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: "medicaments", component : MedicamentsComponent},
   {path: "addMedicament", component : AddMedicamentComponent},
   {path: "updatemedicament", component : UpdatemedicamentComponent},
+  {path: "accueil", component : AccueilComponent},
   { path: "", redirectTo: "login", pathMatch: "full" }
 ];
 

@@ -3,15 +3,21 @@
 <div class="body-content">
   <div class="module">
     <h1><font color="white">Créer un Compte</font></h1>
-    <br>
-    <form class="form" action="form.php" method="post" enctype="multipart/form-data" autocomplete="on">
-      <div class="alert alert-error"></div>
-      <input type="text" placeholder="User Name" name="username" required />
-      <input type="email" placeholder="Email" name="email" required />
-      <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
-      <input type="password" placeholder="Confirm Password" name="confirmpassword" autocomplete="new-password" required />
-      <input type="submit" value="S'inscrire" name="register" class="btn btn-block btn-primary" />
+
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+      <p>
+      <input formControlName="username" type="text"  placeholder="Nom utilisateur" name="username" required />
+      <span  class="text-danger" *ngIf="registerForm.controls['username'].dirty && registerForm.hasError('required','username')"><b> **Nom Utilisateur  </b></span>
+      </p>
+      <input formControlName="name" type="text"  placeholder="Nom" name="name" required /><br>
+      <span  class="text-danger" *ngIf="registerForm.controls['name'].dirty && registerForm.hasError('required','name')"><b>**Nom</b> </span>
+      <input formControlName="email" type="email"  placeholder="Email" name="email" required /><br>
+      <span  class="text-danger" *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')"><b>**Email</b></span>
+      <input formControlName="password" type="password"  placeholder="Mot de Passe" name="password" autocomplete="new-password" required />
+      <span  class="text-danger" *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')"><b>**Mot de Passe</b></span>
+      <input type="submit"  [disabled]= "!registerForm.valid" value="S'inscrire" name="register" class="btn btn-block btn-primary" />
     </form>
-    <p class="message"><font color="white" size="3"> Vous avez déja un compte ? </font> <a href="" routerLink="/login"><font color="white">Connexion</font></a></p>
+    <p class="message"> <font color="white" size="3"> Vous avez déja un compte ? </font> <a href="" routerLink="/login"><font color="white">Connexion</font></a></p>
   </div>
+
 </div>

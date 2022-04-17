@@ -19,7 +19,7 @@ export class AddMedicamentComponent implements OnInit {
   }
 
 
-  addProduit(){
+  addMedicament(){
     this.MedicamentsService.ajouterMedicament(this.NewMedicament)
     .subscribe(m => {
     console.log(m);
