@@ -1,0 +1,31 @@
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+
+     <h4><font color="blue" > Nouvelle Vente </font> </h4>
+     <form >
+  <table class="table table-striped" >
+   <tr>
+    <th>Nom </th>
+     <td><input type="text"[(ngModel)]= "NewVente.nom" name="nom" class="form-control"> </td>
+  </tr>
+   <tr>
+   <th> Prix</th>
+    <td><input type="number" [(ngModel)]= "NewVente.prix" name="prix" class="form-control"> </td>
+  </tr>
+    <tr>
+     <th> Quantité</th>
+      <td><input type="number" [(ngModel)]= "NewVente.quantite" name="quantite" class="form-control"> </td>
+    </tr>
+
+    </table>
+
+    <button type="submit" (click)="addVente()" class="btn btnsuccess" > Ajouter</button>
+      </form>
+  </div>
+  </div>
+</div>
+
+

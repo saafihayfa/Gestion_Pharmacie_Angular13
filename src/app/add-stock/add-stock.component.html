@@ -1,0 +1,33 @@
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+
+     <h4><font color="blue" > Nouveau Stock </font> </h4>
+     <form >
+  <table class="table table-striped" >
+   <tr>
+    <th>Nom </th>
+     <td><input type="text"[(ngModel)]= "NewStock.nom" name="nom" class="form-control"> </td>
+  </tr>
+   <tr>
+   <th> Entrée</th>
+    <td><input type="number" [(ngModel)]= "NewStock.entree" name="entree" class="form-control"> </td>
+  </tr>
+    <tr>
+     <th> Sortie</th>
+      <td><input type="number" [(ngModel)]= "NewStock.sortie" name="sortie" class="form-control"> </td>
+    </tr>
+    <tr>
+      <th> Etat </th>
+       <td><input type="text" [(ngModel)]= "NewStock.etat" name="etat" class="form-control"> </td>
+     </tr>
+    </table>
+
+    <button type="submit" (click)="addStock()" class="btn btnsuccess" > Ajouter</button>
+      </form>
+  </div>
+  </div>
+</div>
+

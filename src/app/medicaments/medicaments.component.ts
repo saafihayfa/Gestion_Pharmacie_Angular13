@@ -3,13 +3,12 @@ import { medicament } from '../model/medicament.model';
 import { MedicamentsService } from '../services/medicaments.service';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-medicaments',
   templateUrl: './medicaments.component.html',
   styleUrls: ['./medicaments.component.css']
 })
+
 export class MedicamentsComponent {
 
  medicam !:medicament[]  ;
@@ -29,17 +28,23 @@ export class MedicamentsComponent {
 
   }
 
-  supprimMedicament(med: medicament)
+  supprimMedicament(md: medicament)
   {
       let conf = confirm("Etes-vous sûr de supprimer ce médicament?");
        if (conf)
-           this.MedicamentsService.supprimerMedicament(med.id).subscribe(() => {
+           this.MedicamentsService.supprimerMedicament(md.id).subscribe(() => {
                console.log("médicament supprimé");
-  });
 
-    this.router.navigate(['medicaments']).then(() => {
-     window.location.reload();
-    });
-}
+               this.SupprimMedicamentDuTableau(md);
+              });
+            }
 
-}
+  SupprimMedicamentDuTableau(m : medicament) {
+     this.medicam.forEach((cur, index) => {
+         if(m.id===cur.id) {
+             this.medicam.splice(index, 1);
+         }
+     });
+    }
+
+  }

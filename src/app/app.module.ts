@@ -12,6 +12,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
 import { UpdatemedicamentComponent } from './updatemedicament/updatemedicament.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CommandesComponent } from './commandes/commandes.component';
+import { AddCommandesComponent } from './add-commandes/add-commandes.component';
+import { StocksComponent } from './stocks/stocks.component';
+import { AddStockComponent } from './add-stock/add-stock.component';
+import { VentesComponent } from './ventes/ventes.component';
+import { AddVenteComponent } from './add-vente/add-vente.component';
 
 
 @NgModule({
@@ -24,6 +30,12 @@ import { AccueilComponent } from './accueil/accueil.component';
     AddMedicamentComponent,
     UpdatemedicamentComponent,
     AccueilComponent,
+    CommandesComponent,
+    AddCommandesComponent,
+    StocksComponent,
+    AddStockComponent,
+    VentesComponent,
+    AddVenteComponent,
   ],
 
   imports: [

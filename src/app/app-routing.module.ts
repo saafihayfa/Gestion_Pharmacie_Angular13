@@ -1,24 +1,35 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { MedicamentsComponent } from './medicaments/medicaments.component';
 import { RegisterComponent } from './register/register.component';
 import { AddMedicamentComponent } from './add-medicament/add-medicament.component';
 import { UpdatemedicamentComponent } from './updatemedicament/updatemedicament.component';
 import { AccueilComponent } from './accueil/accueil.component';
+import { CommandesComponent } from './commandes/commandes.component';
+import { AddCommandesComponent } from './add-commandes/add-commandes.component';
+import { StocksComponent } from './stocks/stocks.component';
+import { AddStockComponent } from './add-stock/add-stock.component';
+import { VentesComponent } from './ventes/ventes.component';
+import { AddVenteComponent } from './add-vente/add-vente.component';
+
 
 
 
 const routes: Routes = [
-  {path: "navbar", component : NavbarComponent},
   {path: "register", component : RegisterComponent},
   {path: "login", component : LoginComponent},
   {path: "medicaments", component : MedicamentsComponent},
   {path: "addMedicament", component : AddMedicamentComponent},
   {path: "updatemedicament", component : UpdatemedicamentComponent},
   {path: "accueil", component : AccueilComponent},
-  { path: "", redirectTo: "login", pathMatch: "full" }
+  {path:"commandes" , component : CommandesComponent},
+  {path:"addcommande", component : AddCommandesComponent},
+  {path: "stocks" , component : StocksComponent},
+  {path:"addstock", component : AddStockComponent},
+  {path:"ventes", component : VentesComponent},
+  {path:"addvente", component: AddVenteComponent},
+  {path: "", redirectTo: "login", pathMatch: "full" }
 ];
 
 @NgModule({

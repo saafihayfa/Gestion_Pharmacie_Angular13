@@ -1,0 +1,33 @@
+
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+     <h2><font color="blue" >  Liste de Stocks </font> </h2>
+  <table class="table table-striped" >
+  <tr>
+       <th>Id</th>
+       <th>Nom</th>
+       <th>Entrée</th>
+       <th>Sortie</th>
+       <th>Etat</th>
+       <th>Actions</th>
+
+ </tr>
+  <tbody *ngFor="let stock of stk ">
+  <tr >
+       <td>{{stock.id}}</td>
+       <td>{{stock.nom}}</td>
+       <td>{{stock.entree}}</td>
+       <td>{{stock.sortie }}</td>
+       <td>{{stock.etat }}</td>
+       <td><a class="btn btn-white" [routerLink]="['/updatestock',stock.id]"><font color="blue"><b>Modifier</b></font></a></td>
+       <td><a class="btn btn-white" (click)="supprimStock(stock)"><font color="red"><b>Supprimer</b></font></a></td>
+  </tr>
+  </tbody>
+  </table>
+  <h6> <a href= "/addstock">Ajouter un Nouveau Stock </a></h6>
+  </div>
+  </div>
+</div>

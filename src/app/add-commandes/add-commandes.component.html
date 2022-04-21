@@ -1,0 +1,33 @@
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+
+     <h4><font color="blue" > Nouvelle Commande </font> </h4>
+     <form >
+  <table class="table table-striped" >
+   <tr>
+    <th>Nom </th>
+     <td><input type="text"[(ngModel)]= "NewCommande.nom" name="nom" class="form-control"> </td>
+  </tr>
+    <tr>
+     <th> Libellé </th>
+      <td><input type="text" [(ngModel)]= "NewCommande.libelle" name="libelle" class="form-control"> </td>
+    </tr>
+    <tr>
+      <th> Quantité </th>
+       <td><input type="number" [(ngModel)]= "NewCommande.quantite" name="quantite" class="form-control"> </td>
+     </tr>
+     <tr>
+      <th> Date Commande </th>
+       <td><input type="date" [(ngModel)]= "NewCommande.dateCommande" name="date_commande" class="form-control"> </td>
+     </tr>
+    </table>
+
+    <button type="submit" (click)="addCommande()" class="btn btnsuccess" > Ajouter</button>
+      </form>
+  </div>
+  </div>
+</div>
+

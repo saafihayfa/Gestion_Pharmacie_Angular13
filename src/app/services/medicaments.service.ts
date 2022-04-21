@@ -16,7 +16,7 @@ const httpOptions = {
 
 export class MedicamentsService {
 
-  apiURL: string = 'http://127.0.0.1:8000/api/medicaments.json' ;
+  apiURL: string = 'http://localhost:8000/api/medicaments.json' ;
 
   constructor(private http : HttpClient) {
 
@@ -33,7 +33,7 @@ export class MedicamentsService {
 
   supprimerMedicament(id : number){
         const url =  `${this.apiURL}/${id}`;
-        return this.http.delete<medicament>( url, httpOptions);
+        return this.http.delete( url, httpOptions);
         }
 
 
