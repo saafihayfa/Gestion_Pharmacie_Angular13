@@ -10,6 +10,7 @@
        <th>Nom</th>
        <th>Prix</th>
        <th>Quantité</th>
+       <th>Date vente</th>
        <th>Actions</th>
 
  </tr>
@@ -19,6 +20,7 @@
        <td>{{vente.nom}}</td>
        <td>{{vente.prix}}</td>
        <td>{{vente.quantite }}</td>
+       <td>{{vente.dateVente}}</td>
        <td><a class="btn btn-white" [routerLink]="['/updatevente',vente.id]"><font color="blue"><b>Modifier</b></font></a></td>
        <td><a class="btn btn-white" (click)="supprimVente(vente)"><font color="red"><b>Supprimer</b></font></a></td>
   </tr>

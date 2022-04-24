@@ -3,5 +3,6 @@ export class vente {
   nom! : string;
   prix! : number;
   quantite!: number ;
+  dateVente!: Date;
 
 }

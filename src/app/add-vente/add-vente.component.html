@@ -20,6 +20,11 @@
       <td><input type="number" [(ngModel)]= "NewVente.quantite" name="quantite" class="form-control"> </td>
     </tr>
 
+    <tr>
+      <th> Date Vente </th>
+       <td><input type="date" [(ngModel)]= "NewVente.dateVente" name="date_vente" class="form-control"> </td>
+     </tr>
+
     </table>
 
     <button type="submit" (click)="addVente()" class="btn btnsuccess" > Ajouter</button>
