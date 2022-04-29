@@ -32,7 +32,7 @@ export class MedicamentsService {
       }
 
   supprimerMedicament(id : number){
-        const url =  `${this.apiURL}/${id}`;
+        const url =  `http://127.0.0.1:8000/api/medicaments/${id}`;
         return this.http.delete( url, httpOptions);
         }
 

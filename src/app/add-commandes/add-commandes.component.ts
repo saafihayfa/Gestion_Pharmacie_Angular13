@@ -23,7 +23,9 @@ export class AddCommandesComponent implements OnInit {
     .subscribe(c => {
     console.log(c);
     });
-    this.router.navigate(['commandes']);
-    }
-
+    this.router.navigate(['commandes']).then(() => {
+      window.location.reload();
+      });
+  }
 }
+

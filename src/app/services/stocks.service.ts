@@ -27,7 +27,7 @@ export class StocksService {
       }
 
   supprimerStock(id : number){
-        const url =  `${this.apiURL}/${id}`;
+        const url =  `http://127.0.0.1:8000/api/stocks/${id}`;
         return this.http.delete( url, httpOptions);
         }
 

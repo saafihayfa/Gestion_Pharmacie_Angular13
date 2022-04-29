@@ -30,7 +30,7 @@ export class CommandesService {
       }
 
   supprimerCommande(id : number){
-        const url =  `${this.apiURL}/${id}`;
+        const url =  `http://127.0.0.1:8000/api/commandes/${id}`;
         return this.http.delete<commande>( url, httpOptions);
         }
 

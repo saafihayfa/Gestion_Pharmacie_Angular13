@@ -18,6 +18,8 @@ import { StocksComponent } from './stocks/stocks.component';
 import { AddStockComponent } from './add-stock/add-stock.component';
 import { VentesComponent } from './ventes/ventes.component';
 import { AddVenteComponent } from './add-vente/add-vente.component';
+import { FournisseursComponent } from './fournisseurs/fournisseurs.component';
+import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { AddVenteComponent } from './add-vente/add-vente.component';
     AddStockComponent,
     VentesComponent,
     AddVenteComponent,
+    FournisseursComponent,
+    AddFournisseurComponent,
   ],
 
   imports: [

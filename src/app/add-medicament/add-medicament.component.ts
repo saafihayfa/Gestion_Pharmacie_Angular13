@@ -24,8 +24,8 @@ export class AddMedicamentComponent implements OnInit {
     .subscribe(m => {
     console.log(m);
     });
-    this.router.navigate(['medicaments']);
+    this.router.navigate(['medicaments']).then(() => {
+      window.location.reload();
+      });
     }
-
-
 }

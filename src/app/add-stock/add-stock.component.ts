@@ -22,8 +22,12 @@ export class AddStockComponent implements OnInit {
     .subscribe(s => {
     console.log(s);
     });
-    this.router.navigate(['stocks']);
-    }
-
-
+    this.router.navigate(['stocks']).then(() => {
+      window.location.reload();
+      });
+  }
 }
+
+
+
+

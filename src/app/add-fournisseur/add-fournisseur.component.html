@@ -1,0 +1,36 @@
+<br>
+<br>
+<div class="container">
+  <div class="card shadow mb-4">
+  <div class="card-body">
+
+     <h4><font color="blue" > Nouveau Fournisseur </font> </h4>
+     <form >
+  <table class="table table-striped" >
+   <tr>
+    <th>Nom </th>
+     <td><input type="text"[(ngModel)]= "NewFournisseur.nom" name="nom" class="form-control"> </td>
+  </tr>
+   <tr>
+   <th> Prénom </th>
+    <td><input type="text" [(ngModel)]= "NewFournisseur.prenom" name="prenom" class="form-control"> </td>
+  </tr>
+    <tr>
+     <th> Email </th>
+      <td><input type="text" [(ngModel)]= "NewFournisseur.email" name="email" class="form-control"> </td>
+    </tr>
+
+    <tr>
+      <th> Téléphone </th>
+       <td><input type="number" [(ngModel)]= "NewFournisseur.telephone" name="telephone" class="form-control"> </td>
+     </tr>
+
+    </table>
+
+    <button type="submit" (click)="addfournisseur()" class="btn btnsuccess" > Ajouter</button>
+      </form>
+  </div>
+  </div>
+</div>
+
+

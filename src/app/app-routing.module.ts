@@ -12,6 +12,8 @@ import { StocksComponent } from './stocks/stocks.component';
 import { AddStockComponent } from './add-stock/add-stock.component';
 import { VentesComponent } from './ventes/ventes.component';
 import { AddVenteComponent } from './add-vente/add-vente.component';
+import { FournisseursComponent } from './fournisseurs/fournisseurs.component';
+import { AddFournisseurComponent } from './add-fournisseur/add-fournisseur.component';
 
 
 
@@ -29,6 +31,8 @@ const routes: Routes = [
   {path:"addstock", component : AddStockComponent},
   {path:"ventes", component : VentesComponent},
   {path:"addvente", component: AddVenteComponent},
+  {path: "fournisseurs", component: FournisseursComponent},
+  {path: "addfournisseur", component: AddFournisseurComponent},
   {path: "", redirectTo: "login", pathMatch: "full" }
 ];
 

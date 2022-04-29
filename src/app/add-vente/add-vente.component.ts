@@ -23,8 +23,10 @@ export class AddVenteComponent implements OnInit {
     .subscribe(s => {
     console.log(s);
     });
-    this.router.navigate(['ventes']);
+    this.router.navigate(['ventes']).then(() => {
+      window.location.reload();
+      });
     }
+  }
 
 
-}
